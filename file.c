@@ -1,5 +1,6 @@
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "file.h"
 #include "public.h"
@@ -29,10 +30,10 @@ int parseArg(int argc, char const *argv[])
 	int i, res;
 	for (i = 1; i < argc; ++i)
 	{
-		if ( is_option == judgeOption(argc[i]) ==  TRUE)
+		/*if ( is_option == judgeOption(argc[i]) ==  TRUE)
 		{
-			/* code */
-		}
+			
+		}*/
 		if ( is_record_param == 0 && (res = judgeType(argv[i], "c")) == TRUE )
 		{
 			FileNames[FileCount] = argv[i];
